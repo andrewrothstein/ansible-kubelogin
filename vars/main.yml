@@ -1,2 +1,11 @@
 ---
 # vars file for kubelogin
+kubelogin_platform_dash: '{{ kubelogin_os }}-{{ kubelogin_arch }}'
+kubelogin_url: '{{ kubelogin_mirror }}/v{{ kubelogin_ver }}/kubelogin-{{ kubelogin_platform_dash }}.{{ kubelogin_archive_type }}'
+kubelogin_tmp_archive: /tmp/kubelogin-{{ kubelogin_platform_dash }}-{{ kubelogin_ver }}.{{ kubelogin_archive_type }}
+kubelogin_checksum: '{{ kubelogin_checksums[kubelogin_ver][kubelogin_platform_dash] }}'
+
+kubelogin_platform_underbar: '{{ kubelogin_os }}_{{ kubelogin_arch }}'
+kubelogin_install_dir: '{{ kubelogin_parent_install_dir }}/kubelogin-{{ kubelogin_platform_dash }}-{{ kubelogin_ver }}'
+kubelogin_install_exe: '{{ kubelogin_install_dir }}/bin/{{ kubelogin_platform_underbar }}/kubelogin'
+kubelogin_install_link: '{{ kubelogin_parent_install_dir }}/bin/kubelogin'
