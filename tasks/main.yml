@@ -54,4 +54,3 @@
     src: '{{ kubelogin_install_exe }}'
     dest: '{{ kubelogin_install_link }}'
     state: link
-
