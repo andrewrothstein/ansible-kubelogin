@@ -1,6 +1,5 @@
 andrewrothstein.kubelogin
 =========
-
 ![Build Status](https://github.com/andrewrothstein/ansible-kubelogin/actions/workflows/build.yml/badge.svg)
 
 Installs [kubelogin](https://github.com/Azure/kubelogin)
