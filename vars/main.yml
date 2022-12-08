@@ -1,5 +1,7 @@
 ---
 # vars file for kubelogin
+kubelogin_os: '{{ kubelogin_os_map[ansible_system] }}'
+kubelogin_arch: '{{ kubelogin_arch_map[ansible_architecture] }}'
 kubelogin_platform_dash: '{{ kubelogin_os }}-{{ kubelogin_arch }}'
 kubelogin_url: '{{ kubelogin_mirror }}/v{{ kubelogin_ver }}/kubelogin-{{ kubelogin_platform_dash }}.{{ kubelogin_archive_type }}'
 kubelogin_tmp_archive: /tmp/kubelogin-{{ kubelogin_platform_dash }}-{{ kubelogin_ver }}.{{ kubelogin_archive_type }}
