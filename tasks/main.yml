@@ -12,15 +12,15 @@
       paths:
         - '{{ role_path }}/vars'
 - name: check for installation in {{ kubelogin_install_exe }}...
-  become: yes
+  become: true
   stat:
     path: '{{ kubelogin_install_exe }}'
-  changed_when: False
+  changed_when: false
   register: kubelogin_binary
 - when: not kubelogin_binary.stat.exists
   block:
     - name: downloading {{ kubelogin_url }}
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ kubelogin_url }}'
@@ -28,29 +28,29 @@
         mode: 0644
         checksum: '{{ kubelogin_checksum }}'
     - name: mkdir {{ kubelogin_install_dir }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ kubelogin_install_dir }}'
         state: directory
         mode: 0755
     - name: unarchiving {{ kubelogin_tmp_archive }} to {{ kubelogin_install_dir }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ kubelogin_tmp_archive }}'
         dest: '{{ kubelogin_install_dir }}'
         creates: '{{ kubelogin_install_exe }}'
   always:
     - name: rm -rf {{ kubelogin_tmp_archive }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ kubelogin_tmp_archive }}'
         state: absent
 - name: linking {{ kubelogin_install_link }} to {{ kubelogin_install_exe }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ kubelogin_install_exe }}'
