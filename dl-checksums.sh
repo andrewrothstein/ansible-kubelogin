@@ -28,4 +28,4 @@ dl_ver() {
     dl $ver win amd64
 }
 
-dl_ver ${1:-0.0.25}
+dl_ver ${1:-0.0.27}
