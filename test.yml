@@ -6,9 +6,9 @@
       ansible.builtin.include_role:
         name: '{{ playbook_dir }}'
     - name: Executing 'kubelogin --version'
-      command: /usr/local/bin/kubelogin --version
+      ansible.builtin.command: /usr/local/bin/kubelogin --version
       changed_when: false
       register: kubelogin_test_output
     - name: Output from 'kubelogin --version'
-      debug:
+      ansible.builtin.debug:
         msg: '{{ kubelogin_test_output.stdout }}'
