@@ -1,6 +1,6 @@
 ---
 # defaults file for kubelogin
-kubelogin_ver: 0.2.17
+kubelogin_ver: 0.2.19
 kubelogin_mirror: https://github.com/Azure/kubelogin/releases/download
 kubelogin_os_map:
   Linux: linux
@@ -501,3 +501,14 @@ kubelogin_checksums:
     linux-arm64: sha256:39608e328d87a98f84c7f5af780d9303ac8eda7a27a6d463f43cc2ae85196184
     # https://github.com/Azure/kubelogin/releases/download/v0.2.17/kubelogin-win-amd64.zip.sha256
     win-amd64: sha256:75fffa09b5ccbcf4791e8d3d30091c7846f3b2858f00e27715e6c6e1a8375c33
+  '0.2.19':
+    # https://github.com/Azure/kubelogin/releases/download/v0.2.19/kubelogin-darwin-amd64.zip.sha256
+    darwin-amd64: sha256:4cddc8606035b46235e5507c7c326777c2f31ffaf2a0c6228476284e873582ea
+    # https://github.com/Azure/kubelogin/releases/download/v0.2.19/kubelogin-darwin-arm64.zip.sha256
+    darwin-arm64: sha256:dd46ad1d9bd9f7c55e4d7a353e648a194dced7fced85ca463b79dbede96af945
+    # https://github.com/Azure/kubelogin/releases/download/v0.2.19/kubelogin-linux-amd64.zip.sha256
+    linux-amd64: sha256:ebaeff02aa899c5cae6a2b954b64fc02738185319df2570f7dc053451efa4b2f
+    # https://github.com/Azure/kubelogin/releases/download/v0.2.19/kubelogin-linux-arm64.zip.sha256
+    linux-arm64: sha256:aad7e7ca2a8e67db15b110e535123c1bc0f31ef488f5d3ab5b9ae7c9de6f48d3
+    # https://github.com/Azure/kubelogin/releases/download/v0.2.19/kubelogin-win-amd64.zip.sha256
+    win-amd64: sha256:0353ff15fa534e610d10b7a7c55d3f10d693bc2fab4d3ec7f7564db6efd22ae4
